@@ -14,6 +14,7 @@ interface TasksContextValue {
   deleteTask: (id: string) => void;
   clearLastDeleted: () => void;
   undoDelete: () => void;
+  
 }
 
 const TasksContext = createContext<TasksContextValue | undefined>(undefined);

@@ -24,6 +24,7 @@ interface UseTasksState {
   deleteTask: (id: string) => void;
   clearLastDeleted: () => void;
   undoDelete: () => void;
+  
 }
 
 const INITIAL_METRICS: Metrics = {

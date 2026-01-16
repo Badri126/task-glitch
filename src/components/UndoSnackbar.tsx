@@ -2,8 +2,8 @@ import { Snackbar, Button } from '@mui/material';
 
 interface Props {
   open: boolean;
-  onClose: () => void;
   onUndo: () => void;
+  onClose: () => void;
 }
 
 export default function UndoSnackbar({ open, onClose, onUndo }: Props) {

@@ -21,6 +21,7 @@ export default function ChartsDashboard({ tasks }: Props) {
     { label: '200-500', count: tasks.filter(t => (t.roi as number) >= 200 && (t.roi as number) <= 500).length },
     { label: '>500', count: tasks.filter(t => (t.roi as number) > 500).length },
     { label: 'N/A', count: tasks.filter(t => (t.roi as number) < 0).length },
+    
   ];
 
   return (

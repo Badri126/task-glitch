@@ -9,6 +9,7 @@ function Stat({ label, value, hint }: { label: string; value: string; hint?: str
       <Typography variant="h5" fontWeight={700}>{value}</Typography>
     </Stack>
   );
+  
   return hint ? <Tooltip title={hint}>{content}</Tooltip> : content;
 }
 

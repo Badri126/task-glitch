@@ -9,6 +9,7 @@ export interface ActivityItem {
 
 interface Props {
   items: ActivityItem[];
+  
 }
 
 export default function ActivityLog({ items }: Props) {

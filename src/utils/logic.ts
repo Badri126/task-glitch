@@ -15,6 +15,7 @@ export function computePriorityWeight(priority: Task['priority']): 3 | 2 | 1 {
     default:
       return 1;
   }
+  
 }
 
 export function withDerived(task: Task): DerivedTask {

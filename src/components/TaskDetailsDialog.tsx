@@ -8,6 +8,7 @@ interface Props {
   task: Task | null;
   onClose: () => void;
   onSave: (id: string, patch: Partial<Task>) => void;
+  
 }
 
 export default function TaskDetailsDialog({ open, task, onClose, onSave }: Props) {

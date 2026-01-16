@@ -26,6 +26,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC',
     quota: { monthlyRevenueGoal: 50000 },
     preferences: { showOnboarding: true },
+    
   });
 
   const value = useMemo<UserContextValue>(() => ({

@@ -28,7 +28,6 @@ export default function TaskTable({ tasks, onAdd, onUpdate, onDelete }: Props) {
   const handleEditClick = (task: Task) => {
     setEditing(task);
     setOpenForm(true);
-    
   };
 
   const handleSubmit = (value: Omit<Task, 'id'> & { id?: string }) => {

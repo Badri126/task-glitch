@@ -72,6 +72,7 @@ export function generateSalesTasks(count: number): Task[] {
     const completedAt = status === 'Done' ? new Date(new Date(createdAt).getTime() + ((i % 10) + 1) * 24 * 3600 * 1000).toISOString() : undefined;
     tasks.push({ id, title: `${title} #${i + 1}`, revenue, timeTaken, priority, status, createdAt, completedAt });
   }
+  
   return tasks;
 }
 

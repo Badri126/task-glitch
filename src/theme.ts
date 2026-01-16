@@ -12,6 +12,7 @@ const commonPalette = {
   divider: alpha('#000', 0.08),
 };
 
+
 export const appTheme = createTheme({
   palette: {
     mode: 'light',

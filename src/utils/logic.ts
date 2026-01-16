@@ -6,6 +6,7 @@ export function computeROI(revenue: number, timeTaken: number): number | null {
   return revenue / timeTaken;
 }
 
+
 export function computePriorityWeight(priority: Task['priority']): 3 | 2 | 1 {
   switch (priority) {
     case 'High':
@@ -33,7 +34,8 @@ export function sortTasks(tasks: ReadonlyArray<DerivedTask>): DerivedTask[] {
     if (bROI !== aROI) return bROI - aROI;
     if (b.priorityWeight !== a.priorityWeight) return b.priorityWeight - a.priorityWeight;
     // Injected bug: make equal-key ordering unstable to cause reshuffling
-    return a.title.localeCompare(b.title); //Stable Sort Fix
+    // Stabilize sorting by using a secondary key when ROI values are equal
+    return a.title.localeCompare(b.title); 
   });
 }
 

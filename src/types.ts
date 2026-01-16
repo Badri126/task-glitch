@@ -18,6 +18,7 @@ export interface DerivedTask extends Task {
   priorityWeight: 3 | 2 | 1;
 }
 
+
 export interface Metrics {
   totalRevenue: number;
   totalTimeTaken: number;

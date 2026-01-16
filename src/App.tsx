@@ -122,6 +122,7 @@ function AppContent() {
               onUpdate={handleUpdate}
               onDelete={handleDelete}
             />
+            
           )}
           {!loading && !error && <ChartsDashboard tasks={filtered} />}
           {!loading && !error && <AnalyticsDashboard tasks={filtered} />}

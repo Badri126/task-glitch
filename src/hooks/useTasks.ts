@@ -40,6 +40,7 @@ export function useTasks(): UseTasksState {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // Clear undo state when snackbar auto-closes to avoid stale undo behavior
   const clearLastDeleted = () => {
   setLastDeleted(null);
 };

@@ -11,6 +11,7 @@ import {
   Select,
   Stack,
   TextField,
+  
 } from '@mui/material';
 import { Priority, Status, Task } from '@/types';
 
@@ -76,6 +77,8 @@ export default function TaskForm({ open, onClose, onSubmit, existingTitles, init
       priority: ((priority || 'Medium') as Priority),
       status: ((status || 'Todo') as Status),
       notes: notes.trim() || undefined,
+      createdAt: initial ? initial.createdAt : new Date().toISOString(),
+      completedAt: initial ? initial.completedAt : undefined,
       ...(initial ? { id: initial.id } : {}),
     };
     onSubmit(payload);

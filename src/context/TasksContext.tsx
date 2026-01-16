@@ -12,6 +12,7 @@ interface TasksContextValue {
   addTask: (task: Omit<Task, 'id'> & { id?: string }) => void;
   updateTask: (id: string, patch: Partial<Task>) => void;
   deleteTask: (id: string) => void;
+  clearLastDeleted: () => void;
   undoDelete: () => void;
 }
 
